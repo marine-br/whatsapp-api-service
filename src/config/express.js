@@ -20,6 +20,7 @@ if (protectRoutes) {
     app.use(tokenCheck)
 }
 
+// cors deploy
 const corsOptions = {
     origin: '*', // Isso permite que todas as origens acessem seu servidor
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
