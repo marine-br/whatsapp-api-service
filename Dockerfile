@@ -4,16 +4,16 @@ ARG _WORKDIR=/home/node/app
 ARG PORT=3333
 
 USER root
-RUN apk add --no-cache git openssh
+RUN apk add --no-cache git
 
 WORKDIR ${_WORKDIR}
 
 COPY package.json yarn.lock ./
-RUN yarn install
+RUN npm install
 
 COPY . .
 
 USER node
 EXPOSE ${PORT}
 
-CMD ["yarn", "start"]
+CMD ["npm", "run", "start"]
