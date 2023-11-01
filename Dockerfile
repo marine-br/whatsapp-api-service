@@ -4,7 +4,7 @@ ARG _WORKDIR=/home/node/app
 ARG PORT=3333
 
 USER root
-RUN apk add --no-cache git
+RUN apk add --no-cache git openssh
 
 WORKDIR ${_WORKDIR}
 
