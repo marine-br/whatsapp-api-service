@@ -16,4 +16,4 @@ COPY . .
 USER node
 EXPOSE ${PORT}
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "start", "--port 8080"]
