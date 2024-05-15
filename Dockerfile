@@ -1,7 +1,7 @@
 FROM node:14-alpine
 
 ARG _WORKDIR=/home/node/app
-ARG PORT=3333
+ARG PORT=8080
 
 USER root
 RUN apk add --no-cache git
