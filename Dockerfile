@@ -1,19 +1,18 @@
-FROM node:14-alpine
-
-ARG _WORKDIR=/home/node/app
-ARG PORT=8080
+FROM node:19-alpine
 
 USER root
 RUN apk add --no-cache git
 
-WORKDIR ${_WORKDIR}
+WORKDIR /home/node/app
 
-COPY package.json yarn.lock ./
+COPY package*.json yarn.lock ./
+
+ADD . /home/node/app
 RUN npm install
 
 COPY . .
 
 USER node
-EXPOSE ${PORT}
+EXPOSE 8080
 
 CMD ["npm", "start", "--port 8080"]
