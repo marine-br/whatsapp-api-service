@@ -4,7 +4,8 @@ package-lock.json
 yarn.lock
 
 # APPLICATION
-.env
+.env*
+!.env.example
 sessiondata
 
 # IDEs
